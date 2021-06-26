@@ -33,6 +33,16 @@
         <img src="https://i.ytimg.com/vi/xzxCwYXz250/maxresdefault.jpg" alt="Image of Proton, Neutron, and Electron">
     </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+$.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+  // Convert key-value pairs to JSON
+  // https://stackoverflow.com/a/39284735/452587
+  data = data.trim().split('\n').reduce(function(obj, pair) {
+    pair = pair.split('=');
+    return obj[pair[0]] = pair[1], obj;
+  }, {});
+  console.log(data);
+});</script>
 </body>
 
 </html>
